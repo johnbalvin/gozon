@@ -18,9 +18,10 @@ func DefaulClient() Client {
 	}
 	return client
 }
-func NewClient(countryCode string, proxyURL *url.URL, tries int) Client {
+func NewClient(countryCode, currency string, proxyURL *url.URL, tries int) Client {
 	client := Client{
 		CountryCode: countryCode,
+		Currency:    currency,
 		ProxyURL:    proxyURL,
 		Tries:       tries,
 	}

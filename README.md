@@ -127,7 +127,7 @@ This project is an open-source tool developed in Golang for extracting product i
             return
         }
         //You need to place the country code, otherwise it will amazon will get it from the IP
-        client := gozon.NewClient("MXN", proxyURL, 6)
+        client := gozon.NewClient("US","MXN", proxyURL, 6)
         productsURLs, _, err := client.GetMainURLs()
         data, _, err := client.GetFromURL(productURL)
         if err != nil {

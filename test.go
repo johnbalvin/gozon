@@ -90,7 +90,7 @@ func TestWithProxy() {
 		log.Println("test 2 -> err: ", err)
 		return
 	}
-	client := NewClient("US", proxyURL, 6)
+	client := NewClient("US", "EUR", proxyURL, 6)
 	productsURLs, _, err := client.GetMainURLs()
 	if err != nil {
 		log.Println("test 3 -> err: ", err)
