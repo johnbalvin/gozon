@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-var regexSpace = regexp.MustCompile(`\[\t\n\]+|[\s ]{2,}`)
+var regexSpace = regexp.MustCompile(`[\s ]+`)
 
 func RemoveSpace(value string) string {
 	return regexSpace.ReplaceAllString(strings.TrimSpace(value), " ")
