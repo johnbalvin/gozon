@@ -216,7 +216,7 @@ func parseBodyDetails(body []byte) (dataRaw, error) {
 		data.Price.CurrencySymbol = currencySymbol
 	})
 	if data.Price.CurrencySymbol == "" {
-		priceRaw := doc.Find(".a-price .a-offscreen").First().Text()
+		priceRaw := doc.Find("#corePrice_feature_div .a-price .a-offscreen").First().Text()
 		symbol, price, err := parsePriceSymbol(priceRaw)
 		if err != nil {
 			return dataRaw{}, trace.NewOrAdd(8, "main", "parseBodyDetails", err, "")
